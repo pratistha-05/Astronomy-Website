@@ -5,11 +5,9 @@ import Typography from '@material-ui/core/Typography'
 const Homepage= () => {
     return(
         <div>
-            
-                    <Typography  >
-                        React & Material-UI Sample Application
-                    </Typography>
-               
+ <Typography  >
+   React & Material-UI Sample Application
+</Typography>
         </div>
     )
 }
