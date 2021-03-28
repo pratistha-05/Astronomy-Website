@@ -45,13 +45,13 @@ const Welcome = () => {
          <FaRocket size={150}/>
          </div>
         <ThemeProvider theme={theme}>
-            <Typography variant="h2">Welcome to Spaconomy</Typography>
+            <Typography variant="h2" color="white">Welcome to Spaconomy</Typography>
         </ThemeProvider>
         
         <p style={{fontSize:20,maxWidth:500,alignItems:'center',justifyContent:'center'}}>One of the things we can do is inspire young mind to that kind of Math and Science education that will help youngsters take us to next level of space travel</p>
        
         <Button className={classes.button1}
-         onClick={() => history.push('/Homepage')}
+         onClick={() => history.push('/homepage')}
         aria-label="large outlined primary button group"
         style={{fontSize:18,color:"white"}}>
         Let's Get Started
