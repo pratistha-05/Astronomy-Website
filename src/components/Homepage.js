@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
         <AppBar style={{backgroundColor: '#BB8FCE'}}position="static">
           <Toolbar>
           
-            <Typography variant="h6" className={classes.title}>
-              News
+            <Typography variant="h6" className={classes.title} onClick={() => history.push('/date_and_timings')}>
+              Todays Timings
             </Typography>
             <Typography variant="h6" className={classes.title}  onClick={() => history.push('/pictures')}>
               Pic Of The Day

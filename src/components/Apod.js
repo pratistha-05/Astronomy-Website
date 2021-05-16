@@ -21,8 +21,6 @@ const theme = createMuiTheme({
     
     });
 
-    
-
   const Photo = props => (
    
     <div >
@@ -34,8 +32,7 @@ const theme = createMuiTheme({
  
 class Apod extends React.Component {
     state = {
-        date: "",
-        photo: ""
+      photo: ""
       };
     componentDidMount(){
         fetch(`https://api.nasa.gov/planetary/apod?api_key=prthtPMoMaUoWLdDHzsfGKjpvsJHhm0C6RRtEBN3`)
