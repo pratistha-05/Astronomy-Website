@@ -4,6 +4,7 @@ import axios from "axios";
 import { Button, Grid, TextField } from '@material-ui/core';
 import {fade,makeStyles,createStyles,withStyles, StylesProvider} from '@material-ui/core/styles';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import InputBase from '@material-ui/core/InputBase';
 import '../App.css';
 
 
@@ -40,7 +41,7 @@ const useStyles=makeStyles((theme)=>
         marginRight:'auto',
         marginTop:100,
         width: '300px',
-        height:50
+        //height:50
       },
 
   
@@ -99,6 +100,7 @@ const handleSearch = () =>{
         flexGrow:1,
         width:'auto',
         backgroundImage:'linear-gradient(red,yellow)',
+       
             
         objectFit: 'cover'}} 
         >
@@ -108,7 +110,8 @@ const handleSearch = () =>{
            
             
             
-            <TextField className={classes.search}
+            <InputBase 
+            className={classes.search}
               placeholder="Search"
               inputProps={{ 'aria-label': 'search' }}
               value={loc}
@@ -120,15 +123,32 @@ const handleSearch = () =>{
             className={classes.button1} 
             onClick={handleSearch}
             >Search</Button>
+
+            <Typography  display="block" align="center"
+            style={{color:'white',fontStyle: 'Poppins',marginTop:'20px',fontSize:18,letterSpacing:0.7,textShadow:'4px 4px 4px black'}}
+            >
+              Hey There! You can give location of any city in here and get timings of all astronomicals events like moonrise, moonset, sunrise, sunset, daylenth and current-time</Typography>
             </Grid>
 
 
             <Grid item xs={12} sm={6}
-        style={{maxHeight:'0'}}
-         >
-          
-           
-            <Button color="inherit" className={classes.button1}>Search</Button>
+        style={{maxHeight:'0'}}>
+          <div style={{
+            fontFamily:"Times",fontSize:22,marginTop:50,marginLeft:50}}>
+          {/*<p>{loc}{" "}is at <b><i>{datas.location.latitude}</i></b>{" "}latitude and <b><i>{datas.location.longitude}</i></b>{" "}longitude</p>*/}
+          <p>Today's Date : <b>{datas.date}</b></p>
+          <p>Length of Day : <b>{datas.day_length}</b>{" "}Hours</p>
+
+          <p>Solar Noon : <b>{datas.solar_noon}</b>{" "}Hours</p>
+          <p>Sun's Distance from Earth : <b>{datas.sun_distance}</b>{" "}K.M</p>
+          <p>Sun Rise Time : <b>{datas.sunrise}</b>{" "}Hours</p>
+          <p>Sun Set Time : <b>{datas.sunset}</b>{" "}Hours</p>           
+
+          <p>Moon's Distance from Earth : <b>{datas.moon_distance}</b>{" "}K.M</p>
+          <p>Moon Rise Time : <b>{datas.moonrise}</b>{" "}Hours</p>
+          <p>Moon Set Time : <b>{datas.moonset}</b>{" "}Hours</p> 
+          </div>
+
             </Grid>
             </Grid>
             </div>
@@ -141,6 +161,8 @@ const handleSearch = () =>{
 //data.moonrise
 //data.mooset
 //data.solar_noon
+
+//TODO
 //data.sun_distance
 //data.sunrise
 //data.sunset 
