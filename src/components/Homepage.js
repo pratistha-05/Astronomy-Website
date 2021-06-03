@@ -45,12 +45,17 @@ const useStyles = makeStyles((theme) => ({
             onClick={() => history.push('/pictures')}>
               Pic Of The Day
             </Button>
-            
+            <Button variant="h6" //className={classes.title}  
+            onClick={() => history.push('/planets')}>
+              Planets
+            </Button>
             <Button >Rate</Button>
           </Toolbar>
         </AppBar>
-        <div style={{marginTop:'200px',marginleft:'100px'}}>
-    <Typography className={classes.text}><span style={{ fontSize:30,}}>WHO ARE </span>ARE WE?</Typography>
+        <div style={{marginTop:'200px',marginleft:'100px',width:'630px'}}>
+    <Typography className={classes.text}><span style={{ fontSize:30,}}>WHO</span>ARE WE?</Typography>
+    <Typography style={{ fontSize:20,color:"white"}}>
+      <b><i>WE FIND THAT WE LIVE IN AN INSIGNIFICANT PLANET OF A HUMDRUM STAR LOST IN A GALAXY TUCKED AWAY IN A CORNOR OF A UNIVERSE IN WHICH THERE ARE FAR MORE GALAXIES THAN PEOPLE</i></b></Typography>
     </div>
       </div>
     );

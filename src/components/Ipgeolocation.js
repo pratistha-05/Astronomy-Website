@@ -43,8 +43,19 @@ const useStyles=makeStyles((theme)=>
         width: '300px',
         //height:50
       },
+    timediv:{
+      fontFamily:"Times",
+      fontSize:22,
+      marginTop:50,
+      width:600,
+      border:'thick',
+      borderStyle:'ridge',
+      justify:'center',
+      display:'block',
+      marginLeft:'auto',
+      marginRight:'auto'
 
-  
+    }
   }
   ));
 
@@ -133,10 +144,9 @@ const handleSearch = () =>{
 
             <Grid item xs={12} sm={6}
         style={{maxHeight:'0'}}>
-          <div style={{
-            fontFamily:"Times",fontSize:22,marginTop:50,marginLeft:50}}>
+          <div className={classes.timediv}>
           {/*<p>{loc}{" "}is at <b><i>{datas.location.latitude}</i></b>{" "}latitude and <b><i>{datas.location.longitude}</i></b>{" "}longitude</p>*/}
-          <p>Today's Date : <b>{datas.date}</b></p>
+          <div style={{marginLeft:30}}><p>Today's Date : <b>{datas.date}</b></p>
           <p>Length of Day : <b>{datas.day_length}</b>{" "}Hours</p>
 
           <p>Solar Noon : <b>{datas.solar_noon}</b>{" "}Hours</p>
@@ -147,6 +157,7 @@ const handleSearch = () =>{
           <p>Moon's Distance from Earth : <b>{datas.moon_distance}</b>{" "}K.M</p>
           <p>Moon Rise Time : <b>{datas.moonrise}</b>{" "}Hours</p>
           <p>Moon Set Time : <b>{datas.moonset}</b>{" "}Hours</p> 
+          </div>
           </div>
 
             </Grid>

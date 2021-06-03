@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import Ipgeolocation from './components/Ipgeolocation';
 import history from './history';
 import Apod from './components/Apod';
+import Planets from "./components/Planets";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <Route path="/homepage" component={Homepage}/>
     <Route path="/pictures" component={Apod}/>
     <Route path="/date_and_timings" component={Ipgeolocation}/>
+    <Route path="/planets" component={Planets}/>
 
     </Switch>
     </div>
