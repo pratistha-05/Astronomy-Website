@@ -52,6 +52,14 @@ const theme = createMuiTheme({
         display:'block',
         marginLeft:'auto',
         marginRight:'auto'
+        },
+        img:{
+           width:'45rem',
+           align:'center',
+         display:'block',
+         marginLeft:'auto',
+        marginRight:'auto',
+        borderRadius:10
         }
     }
     )
@@ -78,7 +86,7 @@ const theme = createMuiTheme({
     <div >
       <h2 align="center"className={classes.heading}>{props.photo.title}</h2>
       <br></br>
-      <img src={props.photo.url} alt={props.photo.title} className={classes.heading}/>
+      <img className={classes.img} src={props.photo.url} alt={props.photo.title} />
       <div className={classes.p}>
       <p style={{marginLeft:20,marginRight:20}}>{props.photo.explanation}</p>
       </div>
