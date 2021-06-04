@@ -5,6 +5,11 @@ import Typography from '@material-ui/core/Typography';
 import { Button, Grid, TextField } from '@material-ui/core';
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
 import history from '../history';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,18 +20,20 @@ title: {
 },
 root:
 {
-  backgroundColor:'red'
+  maxWidth: 345,
 },
+
 text:
 {
   textShadow:'4px 4px 4px #BB8FCE',
-  fontStyle: 'arial',   
+  fontStyle: 'arial',
+  marginLeft:20,   
   fontSize:100,
   letterSpacing:0.7,
 },
 img:{
   height:600,
-  width:'auto',
+  width:'765px',
   align:'center',
 display:'block',
 marginLeft:'auto',
@@ -45,54 +52,70 @@ return (
   // }}>
   <div>
   <div>
-    <AppBar style={{backgroundColor: '#BB8FCE',width:'1000px'}}position="static">
+    <AppBar style={{backgroundColor: '#BB8FCE',width:'100%'}}position="static">
       <Toolbar>
       
-        <Button variant="h6" 
+        <Button  variant="outlined" 
           onClick={() => history.push('/date_and_timings')}>
           Todays Timings
         </Button>
-        <Button variant="h6"  
+        <Button variant="outlined" style={{marginLeft:30}}
         onClick={() => history.push('/pictures')}>
           Pic Of The Day
         </Button>
-        <Button variant="h6" 
+        <Button variant="outlined"  style={{marginLeft:30}}
         onClick={() => history.push('/planets')}>
           Planets
         </Button>
-        <Button >Rate</Button>
+        <Button  variant="outlined" style={{marginLeft:30}}>Rate</Button>
       </Toolbar>
     </AppBar>
     </div>
-    <Grid container style={{minHeight: '100vh' }}> 
+    <Grid container> 
 
 
-      <Grid item xs={12} sm={6}
-      style={{
-      flexGrow:1,
-      width:'auto',
-      objectFit: 'cover',
-      backgroundColor:'red'}} >
-
-        <div style={{marginTop:'200px',marginleft:'100px',width:'630px'}}>
-          <Typography className={classes.text}><span style={{ fontSize:30,}}>WHO</span>ARE WE?</Typography>
-          <Typography style={{ fontSize:20}}>
-               <b><i>WE FIND THAT WE LIVE IN AN INSIGNIFICANT PLANET OF A HUMDRUM STAR LOST IN A GALAXY TUCKED AWAY IN A CORNOR OF A UNIVERSE IN WHICH THERE ARE FAR MORE GALAXIES THAN PEOPLE</i></b></Typography>
-         </div>
+      <Grid item xs={12} sm={6}>
+          <Typography className={classes.text}><span style={{ fontSize:30,}}>WHO ARE</span> WE?</Typography>
+               <Typography style={{ fontSize:20}}>
+               <b><i>WE FIND THAT WE LIVE IN AN INSIGNIFICANT PLANET OF A HUMDRUM STAR LOST IN A GALAXY TUCKED AWAY IN A CORNOR OF A UNIVERSE IN WHICH THERE ARE FAR MORE GALAXIES THAN PEOPLE</i></b>
+</Typography>
       </Grid>
 
 
-    <Grid item xs={12} sm={6}
-      style={{
-      width:'auto',
-      height:'100vh',
-      objectFit: 'cover'}}>
+    <Grid item xs={12} sm={6}>
+      
     
 <img src="https://cdn.dribbble.com/users/2417352/screenshots/11385575/media/1de58f77695f02bbc6b8c7d12fa061ed.jpg" 
 className={classes.img}/>
 
 
   </Grid>
+  <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image="/static/images/cards/contemplative-reptile.jpg"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+      </CardActions>
+    </Card>
 </Grid>
 </div>
 );
