@@ -10,7 +10,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
+import CarouselSlides from './CarouselSlides';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -27,7 +27,7 @@ root:
 card:
 {
   marginTop:30,
-  marginBottom:30,
+  paddingBottom:30,
 display:'flex'
 },
 text:
@@ -78,28 +78,17 @@ return (
       </Toolbar>
     </AppBar>
     </div>
-    <Grid container> 
+  
 
-
-      <Grid item xs={12} sm={6}>
-          <Typography className={classes.text}><span style={{ fontSize:30}}>WHO ARE</span> WE?</Typography>
-               <Typography style={{ fontSize:20,marginLeft:30,maxWidth:500}} >
-               <b><i>WE FIND THAT WE LIVE IN AN INSIGNIFICANT PLANET OF A HUMDRUM STAR LOST IN A GALAXY TUCKED AWAY IN A CORNOR OF A UNIVERSE IN WHICH THERE ARE FAR MORE GALAXIES THAN PEOPLE</i></b>
-            </Typography>
-      </Grid>
-
-
-    <Grid item xs={12} sm={6}>
+     {/*CAROUSEL*/}
+        <div>
+      <CarouselSlides/>
+      </div>
       
-    
-<img src="https://cdn.dribbble.com/users/2417352/screenshots/11385575/media/1de58f77695f02bbc6b8c7d12fa061ed.jpg" 
-className={classes.img}/>
 
+<div style={{backgroundColor:'#dcdcdc'}}>
 
-  </Grid>
-  </Grid>
-
-<Typography style={{fontSize:30,marginLeft:20}} >What's New!</Typography>
+<Typography style={{fontSize:30,marginLeft:20,paddingTop:20}} >What's New!</Typography>
   <div className={classes.card}>
   <Card className={classes.root}>
       <CardActionArea>
@@ -201,6 +190,8 @@ className={classes.img}/>
         </Button>
       </CardActions>
     </Card>
+    
+    </div>
     </div>
 
 </div>
