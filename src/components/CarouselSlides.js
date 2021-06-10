@@ -3,24 +3,45 @@ import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Typography } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
+import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    carousel1:{
+        position: 'relattive',
+    },
+    text:
+    {
+        position: 'absolute',
+        right: '50%',
+        left: '50%',
+        bottom: '15%',
+    },
+   
+}));
+
+
 
 export default function CarouselSlides(){
+    const classes = useStyles();
+
     return(
 
         <Carousel showThumbs={false} showArrows={false} autoPlay >
-        <div style={{backgroundImage:"url("+"https://www.extremetech.com/wp-content/uploads/2019/09/black-hole-nasa.jpg"+")",objectFit:"cover"}}>
-           
-            {/*<img src= />*/}
-            <div style={{marginTop:30}}><Typography color="white">HIIII</Typography></div>
+        <div >
+           <div className={classes.carousel1}>
+            <img src="https://coverfiles.alphacoders.com/494/49416.jpg"/>
+            </div>
+            <div className={classes.text}>
+            <TextField id="standard-basic" label="Standard" />
+            <p>hooooollllllllllaaaaaa</p>
+            </div>
         </div>
         <div>
-            <img src="assets/2.jpeg" />
+            <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-gradient-flat-space-planet-banner-background-image_229576.jpg" />
             <p className="legend">Legend 2</p>
         </div>
-        <div>
-            <img src="assets/3.jpeg" />
-            <p className="legend">Legend 3</p>
-        </div>
+        
     </Carousel>
     );
 }
