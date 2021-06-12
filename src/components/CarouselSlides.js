@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         right: '65%',
         left: '0%',
-        bottom: '80%',
+        bottom: '70%',
         color:'white'
 
     }

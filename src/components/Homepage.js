@@ -46,7 +46,8 @@ display:'block',
 marginLeft:'auto',
 marginRight:'auto',
 borderRadius:10
-}
+},
+
 
 }));
 
@@ -54,34 +55,33 @@ export default function Homepage() {
 const classes = useStyles();
 
 return (
-  //<div style={{backgroundImage:"url("+"https://images.wallpaperscraft.com/image/space_planet_astronomy_133670_3840x2160.jpg"+")",
-//backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',height:'100vh',objectFit:'cover',width:'auto'
-  // }}>
+  
   <div>
-  <div>
-    <AppBar style={{backgroundColor: '#BB8FCE',width:'100%'}}position="static">
+  
+ <div>
+   <div >
+    <AppBar color="transparent" elevation={0} position="fixed">
       <Toolbar>
       
-        <Button  variant="outlined" 
+        <Button style={{color:'white'}}
           onClick={() => history.push('/date_and_timings')}>
           Todays Timings
         </Button>
-        <Button variant="outlined" style={{marginLeft:30}}
+        <Button  style={{marginLeft:30,color:'white'}}
         onClick={() => history.push('/pictures')}>
           Pic Of The Day
         </Button>
-        <Button variant="outlined"  style={{marginLeft:30}}
+        <Button style={{marginLeft:30,color:'white'}}
         onClick={() => history.push('/planets')}>
           Planets
         </Button>
-        <Button  variant="outlined" style={{marginLeft:30}}>Rate</Button>
+        <Button  style={{marginLeft:30,color:'white'}}>Rate</Button>
       </Toolbar>
     </AppBar>
     </div>
-  
 
      {/*CAROUSEL*/}
-        <div>
+       
       <CarouselSlides/>
       </div>
       
