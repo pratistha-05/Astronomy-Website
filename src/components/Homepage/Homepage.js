@@ -2,15 +2,21 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { Button, Grid, TextField } from '@material-ui/core';
+import { Button} from '@material-ui/core';
 import history from '../../history';
 import Cards from './Cards';
 import Framework from './Framework';
 import CarouselSlides from './CarouselSlides';
+import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
 
 
+
+const useStyles = makeStyles((theme) => ({
+  
+
+}));
 export default function Homepage() {
-
+  const classes = useStyles();
 return (
   
   <div>
@@ -48,25 +54,7 @@ return (
       <Cards/>
     </div>
     
-<div style={{backgroundColor:'black'}}>
-  <div  style={{color:'white',paddingTop:30,marginLeft:20,paddingBottom:20}}>
-  <h2>Made Using :</h2>
-  </div>
- <Grid container spacing={3} style={{color:'white',textAlign:'center',paddingBottom:20}}>
- <Grid item xs={3} >
-          <h3>HTML</h3>
-        </Grid>
-        <Grid item xs={3} >
-        <h3>CSS</h3>
-        </Grid>
-        <Grid item xs={3}>
-        <h3>JavaScript</h3>
-        </Grid>
-        <Grid item xs={3}>
-        <h3>ReactJs</h3>
-        </Grid>
- </Grid>
-</div>
+<Framework/>
 
 </div>
 );
