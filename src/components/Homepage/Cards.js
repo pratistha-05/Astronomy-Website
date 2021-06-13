@@ -1,103 +1,42 @@
-import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { Button, Grid, TextField } from '@material-ui/core';
-import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
-import history from '../history';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import CarouselSlides from './CarouselSlides';
+import Typography from '@material-ui/core/Typography';
+import { Button} from '@material-ui/core';
+import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles((theme) => ({
 
-title: {
-  flexGrow: 1,
-  color: "#ffffff"
-},
-root:
-{
-  maxWidth: 345,
-  maxHeight:'100%',
-  marginLeft:50,
-},
-card:
-{
-  marginTop:30,
-  paddingBottom:30,
-display:'flex'
-},
-text:
-{
-  textShadow:'4px 4px 4px #BB8FCE',
-  fontStyle: 'arial',
-  marginLeft:20,   
-  fontSize:100,
-  letterSpacing:0.7,
-},
-img:{
-  height:600,
-  width:'755px',
-  align:'center',
-display:'block',
-marginLeft:'auto',
-marginRight:'auto',
-borderRadius:10
-},
-
-
+    root:
+    {
+      maxWidth: 345,
+      maxHeight:'100%',
+      marginLeft:50,
+    },
+    card:
+    {
+      marginTop:30,
+      paddingBottom:30,
+    display:'flex'
+    },
 }));
 
-export default function Homepage() {
-const classes = useStyles();
+export default function Cards(){
+    const classes = useStyles();
 
-return (
-  
-  <div>
-  
- <div>
-   <div >
-    <AppBar color="transparent" elevation={0} position="fixed">
-      <Toolbar>
-      
-        <Button style={{color:'white'}}
-          onClick={() => history.push('/date_and_timings')}>
-          Todays Timings
-        </Button>
-        <Button  style={{marginLeft:30,color:'white'}}
-        onClick={() => history.push('/pictures')}>
-          Pic Of The Day
-        </Button>
-        <Button style={{marginLeft:30,color:'white'}}
-        onClick={() => history.push('/planets')}>
-          Planets
-        </Button>
-        <Button  style={{marginLeft:30,color:'white'}}>Rate</Button>
-      </Toolbar>
-    </AppBar>
-    </div>
-
-     {/*CAROUSEL*/}
-       
-      <CarouselSlides/>
-      </div>
-      
-
-<div style={{backgroundColor:'#dcdcdc'}}>
-
-<Typography style={{fontSize:30,marginLeft:20,paddingTop:20}} >What's New!</Typography>
-  <div className={classes.card}>
-  <Card className={classes.root}>
+    return(
+        <div className={classes.card}>
+        <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Black Hole"
           height="180"
           image="https://www.extremetech.com/wp-content/uploads/2019/09/black-hole-nasa.jpg"
-          title="Contemplative Reptile"
+          title="Black Hole"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -190,10 +129,6 @@ return (
         </Button>
       </CardActions>
     </Card>
-    
     </div>
-    </div>
-
-</div>
-);
+    );
 }

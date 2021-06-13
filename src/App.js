@@ -2,7 +2,7 @@ import './App.css';
 import Welcome from './components/Welcome';
 import React, { Component } from 'react';
 import { Router, Switch, Route } from "react-router-dom";
-import Homepage from './components/Homepage';
+import Homepage from './components/Homepage/Homepage';
 import Ipgeolocation from './components/Ipgeolocation';
 import history from './history';
 import Apod from './components/Apod';

@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
         right: '65%',
         left: '0%',
         bottom: '70%',
+        top:'20%',
         color:'white'
 
     }
