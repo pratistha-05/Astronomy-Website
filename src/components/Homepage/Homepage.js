@@ -7,16 +7,11 @@ import history from '../../history';
 import Cards from './Cards';
 import Framework from './Framework';
 import CarouselSlides from './CarouselSlides';
-import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
 
 
 
-const useStyles = makeStyles((theme) => ({
-  
 
-}));
 export default function Homepage() {
-  const classes = useStyles();
 return (
   
   <div>

@@ -1,24 +1,70 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import {Grid} from '@material-ui/core';
+import Card from '@material-ui/core/Card';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles((theme) => ({
+  card:
+  {
+      backgroundColor:'#dcdcdc',
+      marginBottom:30,
+      marginLeft:20
+  }
+
+}));
 
 export default function Planets(){
+    const classes = useStyles();
+
     return(
 
-        <Carousel showThumbs={false} showArrows={false} autoPlay interval="1000">
-        <div>
-            <img src="https://www.extremetech.com/wp-content/uploads/2019/09/black-hole-nasa.jpg" />
-            <p className="legend">Legend 1</p>
-        </div>
-        <div>
-            <img src="assets/2.jpeg" />
-            <p className="legend">Legend 2</p>
-        </div>
-        <div>
-            <img src="assets/3.jpeg" />
-            <p className="legend">Legend 3</p>
-        </div>
-    </Carousel>
+       <div>
+         <Card className={classes.card}>
+             <Grid container style={{textAlign:'center',paddingBottom:20}}>
+         <Grid item xs={3} >
+          <h3>Mercury</h3>
+        </Grid>
+        <Grid item xs={9} >
+          <h3>Mercury</h3>
+        </Grid>
+        </Grid>
+        </Card>
+
+        <Card className={classes.card}>
+             <Grid container style={{textAlign:'center',paddingBottom:20}}>
+         <Grid item xs={3} >
+          <h3>Mercury</h3>
+        </Grid>
+        <Grid item xs={9} >
+          <h3>Mercury</h3>
+        </Grid>
+        </Grid>
+        </Card>
+
+        <Card className={classes.card}>
+             <Grid container style={{textAlign:'center',paddingBottom:20}}>
+         <Grid item xs={3} >
+          <h3>Mercury</h3>
+        </Grid>
+        <Grid item xs={9} >
+          <h3>Mercury</h3>
+        </Grid>
+        </Grid>
+        </Card>
+
+        <Card className={classes.card}>
+             <Grid container style={{textAlign:'center',paddingBottom:20}}>
+         <Grid item xs={3} >
+          <h3>Mercury</h3>
+        </Grid>
+        <Grid item xs={9} >
+          <h3>Mercury</h3>
+        </Grid>
+        </Grid>
+        </Card>
+
+       </div>
     );
 }
