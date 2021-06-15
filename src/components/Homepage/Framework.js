@@ -9,8 +9,8 @@ root:{
     paddingBottom:20
 },
 img:{
-    height:120,
-    width:120
+    height:'auto',
+    width:'100%'
   }
 }));
 
