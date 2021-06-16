@@ -1,5 +1,7 @@
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core';
+import html from './assests/html.jpg';
+
 
 const useStyles = makeStyles((theme) => ({
 root:{
@@ -24,7 +26,7 @@ export default function Framework(){
  <Grid container style={{color:'white',textAlign:'center',paddingBottom:20}}>
  <Grid item xs={2} >
           <h3>HTML</h3>
-          <img className={classes.img}src="http://assets.stickpng.com/thumbs/5847f5bdcef1014c0b5e489c.png"/>
+          <img className={classes.img}src={html} alt="html"/>
         </Grid>
         <Grid item xs={3} >
         <h3>CSS</h3>
