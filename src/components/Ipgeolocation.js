@@ -39,7 +39,7 @@ const useStyles=makeStyles((theme)=>
         },
         marginLeft: 'auto',
         marginRight:'auto',
-        marginTop:100,
+        marginTop:30,
         width: '300px',
         //height:50
       },
@@ -55,19 +55,20 @@ const useStyles=makeStyles((theme)=>
       marginLeft:'auto',
       marginRight:'auto'
 
+    },
+    heading:{
+      color:'white',
+      fontFamily: "Segoe Script",
+      paddingTop:'20px',
+      fontSize:18,
+      letterSpacing:0.7,
+      textShadow:'4px 4px 4px black'
+
     }
   }
   ));
 
  
-  const theme = createMuiTheme({
-    typography: {
-      fontFamily: [
-        'Ranchers'
-      ].join(','),
-    },
-   
-    });
 
 export default function Ipgeolocation() {
   const classes=useStyles();
@@ -102,28 +103,17 @@ const handleSearch = () =>{
   
 
       return(
-         <div>
-        <Grid container style={{minHeight: '100vh' }}> 
+         <div style={{ backgroundImage:'linear-gradient(red,yellow)'}}>
 
-
-        <Grid item xs={12} sm={6}
-        style={{height:'100vh',
-        flexGrow:1,
-        width:'auto',
-        backgroundImage:'linear-gradient(red,yellow)',
-       
-            
-        objectFit: 'cover'}} 
-        >
-          <ThemeProvider theme={theme}>
-             <Typography align="center" variant="h4">Enter the City's name</Typography>
-             </ThemeProvider>
-           
-            
-            
+<Typography  display="block" align="center" className={classes.heading}><b>
+              Hey There! You can give location of any city in here and get timings of all astronomicals events like moonrise, moonset, sunrise, sunset, daylenth and current-time
+              </b></Typography>
+      
+             <Typography align="center" variant="h4" style={{marginTop:30}}>Enter the City's name</Typography>
+                 
             <InputBase 
             className={classes.search}
-              placeholder="Search"
+              placeholder="City"
               inputProps={{ 'aria-label': 'search' }}
               value={loc}
               onChange={handleChange}
@@ -134,16 +124,9 @@ const handleSearch = () =>{
             className={classes.button1} 
             onClick={handleSearch}
             >Search</Button>
+            
 
-            <Typography  display="block" align="center"
-            style={{color:'white',fontStyle: 'Poppins',marginTop:'20px',fontSize:18,letterSpacing:0.7,textShadow:'4px 4px 4px black'}}
-            >
-              Hey There! You can give location of any city in here and get timings of all astronomicals events like moonrise, moonset, sunrise, sunset, daylenth and current-time</Typography>
-            </Grid>
-
-
-            <Grid item xs={12} sm={6}
-        style={{maxHeight:'0'}}>
+     
           <div className={classes.timediv}>
           {/*<p>{loc}{" "}is at <b><i>{datas.location.latitude}</i></b>{" "}latitude and <b><i>{datas.location.longitude}</i></b>{" "}longitude</p>*/}
           <div style={{marginLeft:30}}><p>Today's Date : <b>{datas.date}</b></p>
@@ -160,8 +143,7 @@ const handleSearch = () =>{
           </div>
           </div>
 
-            </Grid>
-            </Grid>
+            
             </div>
            
       
