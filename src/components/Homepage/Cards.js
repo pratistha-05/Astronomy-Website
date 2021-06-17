@@ -6,25 +6,43 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Button} from '@material-ui/core';
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/styles";
+
 
 
 const useStyles = makeStyles((theme) => ({
 
     root:
     {
-      maxWidth: 345,
-      maxHeight:'100%',
-      marginLeft:50,
+      maxWidth: 310,
+        [theme.breakpoints.down("sm")] : {
+      maxWidth:'100%',
+      height:'auto',
+      },
+    marginLeft:30,
+    marginRight:30,
+    marginBottom:10,
+      float: 'left',
     },
     card:
     {
+      [theme.breakpoints.down("sm")] : {
+        flexDirection:'column'
+      },
       marginTop:30,
       paddingBottom:30,
-    display:'flex'
+      display:'flex',
+      flexDirection:'row'
     },
+   
 }));
 
+
 export default function Cards(){
+  const theme = useTheme();
+
+
     const classes = useStyles();
 
     return(
@@ -132,3 +150,5 @@ export default function Cards(){
     </div>
     );
 }
+
+// maxWidth: 310,  [theme.breakpoints.down("sm")] : {}

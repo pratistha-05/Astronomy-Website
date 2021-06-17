@@ -13,6 +13,12 @@ root:{
 img:{
     height:'100px',
     width:'100px'
+  },
+  madeBy:{
+ 
+    color:'white',
+    marginLeft:'45%',
+    marginRight:'45%'
   }
 }));
 
@@ -45,6 +51,11 @@ export default function Framework(){
         <img className={classes.img}src="https://img.icons8.com/color/480/material-ui.png"/>
         </Grid>
  </Grid>
+ <div className={classes.madeBy}>
+ <h4>Developed by</h4>
+ <p style={{marginBottom:-8}}>Pratistha Sinha</p>
+ follow me at
+ </div>
 </div>
     );
 }

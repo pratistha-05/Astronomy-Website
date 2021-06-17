@@ -7,21 +7,6 @@ import '../App.css';
 import Box from '@material-ui/core/Box';
 
 
-
-  
-
-const theme = createMuiTheme({
-    typography: {
-      fontFamily: [
-        'Ranchers'
-      ].join(','),
-      allVariants:{
-        color:"#900c3f",
-        fontSize: 50,
-    }
-    },
-    
-    });
     const useStyles=makeStyles(()=>
     createStyles({
        heading:
@@ -67,9 +52,7 @@ const theme = createMuiTheme({
     const defaultProps = {
       bgcolor: 'background.paper',
       borderColor: 'text.primary',
-      m: 1,
       border: 1,
-      marginTop:10,
       style: { width: '45rem',align:'center',
       display:'block',
       marginLeft:'auto',
@@ -107,17 +90,18 @@ class Apod extends React.Component {
     
 
 render(){
-  
+
 
 return(
-    <div>
-    <ThemeProvider theme={theme}>
+    <div style={{backgroundImage:'linear-gradient(to right, #ace5ee , #ffb6c1)'}}>
+ 
       
     <Box borderRadius={16} {...defaultProps} >
-       <Typography align="center">NASA's Astronomy Picture of the Day</Typography>
+       <Typography align="center" style={{fontFamily:'Segoe Script',fontSize:28,color:'#800080'}}>
+         NASA's Astronomy Picture of the Day
+      </Typography>
    </Box>
-       </ThemeProvider>
-      
+     
 
         <Photo photo={this.state.photo} />
       </div>
