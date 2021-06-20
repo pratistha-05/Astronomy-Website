@@ -6,7 +6,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Button} from '@material-ui/core';
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/styles";
 
 
@@ -66,7 +65,7 @@ export default function Cards(){
       </CardActionArea>
       <CardActions>
         
-        <Button size="small" color="primary" >
+        <Button size="small" color="primary" onClick={()=> window.location.href = "https://en.wikipedia.org/wiki/Black_hole"} >
           Learn More
         </Button>
       </CardActions>
@@ -91,7 +90,7 @@ export default function Cards(){
       </CardActionArea>
       <CardActions>
         
-        <Button size="small" color="primary" >
+        <Button size="small" color="primary" onClick={()=> window.location.href = "https://www.thoughtco.com/milky-way-core-3072394"} >
           Learn More
         </Button>
       </CardActions>
@@ -117,7 +116,7 @@ export default function Cards(){
       </CardActionArea>
       <CardActions>
         
-        <Button size="small" color="primary" >
+        <Button size="small" color="primary" onClick={()=> window.location.href = "https://en.m.wikipedia.org/wiki/Proxima_Centauri"}>
           Learn More
         </Button>
       </CardActions>
@@ -142,7 +141,7 @@ export default function Cards(){
       </CardActionArea>
       <CardActions>
         
-        <Button size="small" color="primary" >
+        <Button size="small" color="primary" onClick={()=> window.location.href = "https://en.wikipedia.org/wiki/Carina_Nebula"} >
           Learn More
         </Button>
       </CardActions>

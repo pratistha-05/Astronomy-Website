@@ -33,7 +33,6 @@ return (
         onClick={() => history.push('/planets')}>
           Planets
         </Button>
-        <Button  style={{marginLeft:30,color:'white'}}>Rate</Button>
       </Toolbar>
     </AppBar>
     </div>

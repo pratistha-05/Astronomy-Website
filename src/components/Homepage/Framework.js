@@ -14,10 +14,7 @@ img:{
     width:'100px'
   },
   madeBy:{
-   align:'center',
-    display:'block',
-    marginLeft:'auto',
-    marginRight:'auto',
+  justify:'center',
     color:'white',
    
   }
@@ -53,13 +50,13 @@ export default function Framework(){
         </Grid>
  </Grid>
  <div className={classes.madeBy}>
- <p align="center">
+ <p align="center" style={{marginBottom:-8}}>
+   <i>
    Developed by:
 Pratistha Sinha
+</i>
 </p>
-<p align="center">
-follow me at
-</p>
+
  </div>
 </div>
     );

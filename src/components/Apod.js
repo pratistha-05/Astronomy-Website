@@ -1,7 +1,5 @@
-import React, { Component, useState , setState} from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
 import '../App.css';
 import Box from '@material-ui/core/Box';
