@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-material-ui-carousel'
 import { Typography } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
+import slide1 from '../assests/slide1.jpg';
+import slide2 from '../assests/slide2.jpg';
+
 
 const useStyles = makeStyles((theme) => ({
    
@@ -18,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     },
     text1:{
         fontSize:80,
+        [theme.breakpoints.down("sm")] : {
+            fontSize:40,
+            },
         marginBottom:-8
     },
     heading:{
@@ -28,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
         top:'20%',
         color:'white'
 
+    },
+    photo:
+    {
+        width:'1800vh',
+        height:'600px'
     }
    
 }));
@@ -46,10 +57,10 @@ export default function CarouselSlides(){
 
     return(
 
-        <Carousel showThumbs={false} autoPlay infiniteLoop interval="5000">
+        <Carousel showThumbs={false} autoPlay infiniteLoop interval="5000" dynamicHeight="true">
         <div >
-           <div>
-            <img src="https://coverfiles.alphacoders.com/494/49416.jpg"/>
+           <div >
+            <img src={slide1} className={classes.photo}/>
             </div>
             <div className={classes.text}>
            <h3 className={classes.text1}><span style={{ fontSize:30}}>WHO ARE</span> WE? </h3>
@@ -65,7 +76,7 @@ export default function CarouselSlides(){
         </div>
         <div>
             <div>
-            <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-purple-gradient-flat-space-planet-banner-background-image_229576.jpg" />
+            <img src={slide2} style={{height:600,width:2000}}/>
             </div>
             <div className={classes.text}>
             <h3 className={classes.text1}><span style={{ fontSize:30}}>WHERE ARE</span> WE?</h3>

@@ -1,6 +1,5 @@
 import {makeStyles,createStyles,withStyles} from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core';
-import html from '../assests/html.jpg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,10 +14,12 @@ img:{
     width:'100px'
   },
   madeBy:{
- 
+   align:'center',
+    display:'block',
+    marginLeft:'auto',
+    marginRight:'auto',
     color:'white',
-    marginLeft:'45%',
-    marginRight:'45%'
+   
   }
 }));
 
@@ -30,31 +31,35 @@ export default function Framework(){
   <h2>Made Using :</h2>
   </div>
  <Grid container style={{color:'white',textAlign:'center',paddingBottom:20}}>
- <Grid item xs={2} >
+ <Grid itemxs={4} sm={4} md={2}>
           <h3>HTML</h3>
           <img className={classes.img}src="http://assets.stickpng.com/thumbs/5847f5bdcef1014c0b5e489c.png"/>
         </Grid>
-        <Grid item xs={3} >
+        <Grid item xs={4} sm={4} md={2}>
         <h3>CSS</h3>
         <img className={classes.img}src="https://logodix.com/logo/1111675.png"/>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4} sm={4} md={2}>
         <h3>JavaScript</h3>
         <img className={classes.img}src="https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png"/>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={4} sm={4} md={2}>
         <h3>ReactJs</h3>
         <img className={classes.img}src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"/>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={4} sm={4} md={2}>
         <h3>Material UI</h3>
         <img className={classes.img}src="https://img.icons8.com/color/480/material-ui.png"/>
         </Grid>
  </Grid>
  <div className={classes.madeBy}>
- <h4>Developed by</h4>
- <p style={{marginBottom:-8}}>Pratistha Sinha</p>
- follow me at
+ <p align="center">
+   Developed by:
+Pratistha Sinha
+</p>
+<p align="center">
+follow me at
+</p>
  </div>
 </div>
     );

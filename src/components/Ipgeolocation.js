@@ -47,7 +47,7 @@ const useStyles=makeStyles((theme)=>
       fontFamily:"Times",
       fontSize:22,
       marginTop:50,
-      width:600,
+      width:'50%',
       border:'thick',
       borderStyle:'ridge',
       justify:'center',
