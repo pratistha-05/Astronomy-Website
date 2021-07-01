@@ -34,10 +34,11 @@ import Box from '@material-ui/core/Box';
         justify:'center',
         display:'block',
         marginLeft:'auto',
-        marginRight:'auto'
+        marginRight:'auto',
         },
         img:{
-           width:'45rem',
+           width:'70%',
+           height:'auto',
            align:'center',
          display:'block',
          marginLeft:'auto',
@@ -64,10 +65,14 @@ import Box from '@material-ui/core/Box';
     const classes = useStyles();
 
     return(
-    <div >
+    <div>
       <h2 align="center"className={classes.heading}>{props.photo.title}</h2>
       <br></br>
+
+      <div >
       <img className={classes.img} src={props.photo.url} alt={props.photo.title} />
+      </div>
+
       <div className={classes.p}>
       <p style={{marginLeft:20,marginRight:20}}>{props.photo.explanation}</p>
       </div>

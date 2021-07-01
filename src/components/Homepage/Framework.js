@@ -16,8 +16,11 @@ img:{
   madeBy:{
   justify:'center',
     color:'white',
+    paddingBottom:20,
+    textAlign:'center'
    
-  }
+  },
+ 
 }));
 
 export default function Framework(){
@@ -50,13 +53,12 @@ export default function Framework(){
         </Grid>
  </Grid>
  <div className={classes.madeBy}>
- <p align="center" style={{marginBottom:-8}}>
-   <i>
-   Developed by:
-Pratistha Sinha
-</i>
-</p>
 
+  
+          <div>
+              <p ><i><b>Developed by Pratistha Sinha</b></i></p>
+              
+         </div>      
  </div>
 </div>
     );
